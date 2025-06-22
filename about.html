@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Cropella</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* About Us specific styles */
+        .about-hero {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .about-content {
+            padding: 80px 0;
+        }
+
+        .about-section {
+            margin-bottom: 100px;
+        }
+
+        .about-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-text {
+            padding-right: 40px;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .values-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+            margin: 80px 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .value-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .stats-section {
+            padding: 80px 0;
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        .team-section {
+            padding: 80px 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #ccc;
+        }
+
+        .team-member h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #1a1a1a;
+        }
+
+        .team-member p {
+            color: #666;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-text {
+                padding-right: 0;
+            }
+
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-text h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="header-left">
+                        <a href="#" class="header-link">Customer Service</a>
+                        <a href="#" class="header-link">Store Locator</a>
+                    </div>
+                    <div class="header-right">
+                        <a href="#" class="header-link">Sign In</a>
+                        <a href="#" class="header-link">Help</a>
+                        <a href="#" class="header-link">Indonesia</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-main">
+            <div class="container">
+                <div class="header-main-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1>CROPELLA</h1>
+                        </a>
+                    </div>
+                    
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li><a href="catalog.html" class="nav-link">CATALOG</a></li>
+                            <li><a href="#" class="nav-link">ACCESSORIES</a></li>
+                            <li><a href="#" class="nav-link">SALE</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="header-actions">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="account-btn">
+                            <i class="fas fa-user"></i>
+                        </button>
+                        <button class="cart-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-badge" id="cartBadge">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>OUR STORY</h1>
+            <p>Empowering women through innovative activewear that combines performance, style, and sustainability. Discover the journey that brought Cropella to life.</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <!-- Our Mission -->
+            <div class="about-section">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2>OUR MISSION</h2>
+                        <p>At Cropella, we believe that every woman deserves to feel confident, comfortable, and empowered in her active lifestyle. Our mission is to create premium activewear that not only performs at the highest level but also makes you look and feel amazing.</p>
+                        <p>We're committed to designing pieces that seamlessly transition from the gym to everyday life, ensuring that style and functionality go hand in hand. Every garment is crafted with attention to detail, using innovative fabrics and construction techniques that enhance your performance while maintaining our signature aesthetic.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="Assets/WhatsApp Image 2025-06-22 at 00.36.31_f42d5eff.jpg" alt="Cropella Mission">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Story -->
+            <div class="about-section">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="Assets/WhatsApp Image 2025-06-22 at 01.28.11_a970dae9.jpg" alt="Cropella Story">
+                    </div>
+                    <div class="about-text">
+                        <h2>HOW IT STARTED</h2>
+                        <p>Founded in 2020, Cropella was born from a simple yet powerful idea: activewear should be as beautiful as it is functional. Our founder, a fitness enthusiast and fashion lover, was frustrated by the lack of stylish, high-performance activewear that could keep up with her active lifestyle.</p>
+                        <p>What began as a small collection of leggings and sports bras has grown into a comprehensive activewear brand that women across Indonesia trust for their daily workouts and active pursuits. We've stayed true to our roots while continuously innovating and expanding our offerings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>OUR VALUES</h2>
+                <p>The principles that guide everything we do</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>PASSION</h3>
+                    <p>We're passionate about fitness, fashion, and empowering women to live their best lives through active living.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>SUSTAINABILITY</h3>
+                    <p>We're committed to reducing our environmental impact through responsible sourcing and eco-friendly practices.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>QUALITY</h3>
+                    <p>Every piece is crafted with premium materials and expert construction to ensure lasting performance and comfort.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>COMMUNITY</h3>
+                    <p>We're building a community of strong, confident women who support and inspire each other.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>50K+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100+</h3>
+                    <p>Product Styles</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5</h3>
+                    <p>Years of Excellence</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>Customer Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>MEET OUR TEAM</h2>
+                <p>The passionate individuals behind Cropella</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Sarah Johnson</h3>
+                    <p>Founder & CEO</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Maria Rodriguez</h3>
+                    <p>Head of Design</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>David Chen</h3>
+                    <p>Operations Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CUSTOMER SERVICE</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>ABOUT CROPELLA</h4>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>FOLLOW US</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>COUNTRY/REGION</h4>
+                    <select class="country-select">
+                        <option>Indonesia</option>
+                        <option>Malaysia</option>
+                        <option>Singapore</option>
+                        <option>Thailand</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 CROPELLA. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Accessibility</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

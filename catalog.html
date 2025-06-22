@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cropella - Women's Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="catalog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="header-left">
+                        <a href="#" class="header-link">Customer Service</a>
+                        <a href="#" class="header-link">Store Locator</a>
+                    </div>
+                    <div class="header-right">
+                        <a href="#" class="header-link">Sign In</a>
+                        <a href="#" class="header-link">Help</a>
+                        <a href="#" class="header-link">Indonesia</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-main">
+            <div class="container">
+                <div class="header-main-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1>CROPELLA</h1>
+                        </a>
+                    </div>
+                    
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li><a href="#" class="nav-link active">CATALOG</a></li>
+                            <li><a href="#" class="nav-link">ACCESSORIES</a></li>
+                            <li><a href="#" class="nav-link">SALE</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="header-actions">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="account-btn">
+                            <i class="fas fa-user"></i>
+                        </button>
+                        <button class="cart-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-badge" id="cartBadge">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Catalog Header -->
+    <section class="catalog-header">
+        <div class="container">
+            <div class="catalog-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Women</span>
+            </div>
+            <h1 class="catalog-title">WOMEN'S COLLECTION</h1>
+            <p class="catalog-subtitle">Discover our latest activewear designed for performance and style</p>
+        </div>
+    </section>
+
+    <!-- Filters and Sort -->
+    <section class="catalog-tools">
+        <div class="container">
+            <div class="catalog-tools-content">
+                <div class="filters">
+                    <button class="filter-btn" id="filterBtn">
+                        <i class="fas fa-filter"></i>
+                        FILTERS
+                    </button>
+                    <div class="active-filters" id="activeFilters">
+                        <!-- Active filters will be shown here -->
+                    </div>
+                </div>
+                
+                <div class="sort">
+                    <label for="sortSelect">SORT BY:</label>
+                    <select id="sortSelect" class="sort-select">
+                        <option value="newest">Newest</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Sidebar -->
+    <div class="filter-sidebar" id="filterSidebar">
+        <div class="filter-header">
+            <h3>FILTERS</h3>
+            <button class="close-filters" id="closeFilters">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="filter-sections">
+            <div class="filter-section">
+                <h4>CATEGORY</h4>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" value="tops">
+                        <span>Tops</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="bottoms">
+                        <span>Bottoms</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="sports-bras">
+                        <span>Sports Bras</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="outerwear">
+                        <span>Outerwear</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="filter-section">
+                <h4>SIZE</h4>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" value="xs">
+                        <span>XS</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="s">
+                        <span>S</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="m">
+                        <span>M</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="l">
+                        <span>L</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="xl">
+                        <span>XL</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="filter-section">
+                <h4>PRICE</h4>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" value="under-200">
+                        <span>Under Rp 200.000</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="200-400">
+                        <span>Rp 200.000 - Rp 400.000</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="400-600">
+                        <span>Rp 400.000 - Rp 600.000</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="over-600">
+                        <span>Over Rp 600.000</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="filter-section">
+                <h4>COLOR</h4>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" value="black">
+                        <span>Black</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="white">
+                        <span>White</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="gray">
+                        <span>Gray</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="pink">
+                        <span>Pink</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="blue">
+                        <span>Blue</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="filter-actions">
+            <button class="btn btn-secondary" id="clearFilters">CLEAR ALL</button>
+            <button class="btn btn-primary" id="applyFilters">APPLY FILTERS</button>
+        </div>
+    </div>
+
+    <!-- Products Grid -->
+    <section class="catalog-products">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+            
+            <div class="load-more">
+                <button class="btn btn-secondary" id="loadMoreBtn">LOAD MORE</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="checkout-modal">
+        <div class="checkout-content">
+            <div class="checkout-header">
+                <h2>SHOPPING CART</h2>
+                <button class="close-modal" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be dynamically added here -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <p>Your cart is empty</p>
+                    <span>Add some products to get started</span>
+                </div>
+            </div>
+            
+            <div class="checkout-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">Rp 0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span id="shipping">Rp 15.000</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="total">Rp 15.000</span>
+                </div>
+            </div>
+            
+            <div class="checkout-actions">
+                <button class="btn btn-secondary" id="continueShopping">CONTINUE SHOPPING</button>
+                <button class="btn btn-primary" id="placeOrder">PLACE YOUR ORDER</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="catalog.js"></script>
+</body>
+</html> 
